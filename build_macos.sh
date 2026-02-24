@@ -9,8 +9,8 @@ pyinstaller \
   --clean \
   --onefile \
   --windowed \
-  --name new_psr \
+  --name mini_psrv1.0.0_macos \
   procedure_recorder/main.py
 
 echo
-echo "Build termine: dist/new_psr"
+echo "Build termine: dist/mini_psrv1.0.0_macos"

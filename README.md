@@ -39,8 +39,8 @@ python procedure_recorder/main.py
 build_exe.bat
 ```
 
-- L'executable est genere dans `dist\new_psr.exe`
-- En mode `.exe`, les captures sont enregistrees a cote de `new_psr.exe`
+- L'executable est genere dans `dist\mini_psrv1.0.0_win.exe`
+- En mode `.exe`, les captures sont enregistrees a cote de `mini_psrv1.0.0_win.exe`
 - Dossier de sortie: `procedure_YYYY-MM-DD`
 
 ## Build macOS (binaire portable)
@@ -50,7 +50,7 @@ chmod +x build_macos.sh
 ./build_macos.sh
 ```
 
-- Binaire genere: `dist/new_psr`
+- Binaire genere: `dist/mini_psrv1.0.0_macos`
 
 ## Build Linux (binaire portable)
 
@@ -59,7 +59,7 @@ chmod +x build_linux.sh
 ./build_linux.sh
 ```
 
-- Binaire genere: `dist/new_psr`
+- Binaire genere: `dist/mini_psrv1.0.0_linux`
 
 ## Utilisation
 
