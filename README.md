@@ -12,7 +12,7 @@ Outil Python minimal pour capturer une zone d'ecran a chaque clic souris.
 - Compression PNG optimisee pour reduire la taille des fichiers
 - Pause / reprise
 - Arret
-- Sauvegarde dans un dossier `procedure_YYYY-MM-DD_HH-MM-SS` avec:
+- Sauvegarde dans un dossier `procedure_YYYY-MM-DD` avec:
   - `1.png`, `2.png`, ...
   - `steps.json` avec `step`, `file` et `event` (`click` ou `enter`)
 
@@ -32,6 +32,34 @@ pip install -r requirements.txt
 ```bash
 python procedure_recorder/main.py
 ```
+
+## Build .exe portable (Windows)
+
+```bash
+build_exe.bat
+```
+
+- L'executable est genere dans `dist\new_psr.exe`
+- En mode `.exe`, les captures sont enregistrees a cote de `new_psr.exe`
+- Dossier de sortie: `procedure_YYYY-MM-DD`
+
+## Build macOS (binaire portable)
+
+```bash
+chmod +x build_macos.sh
+./build_macos.sh
+```
+
+- Binaire genere: `dist/new_psr`
+
+## Build Linux (binaire portable)
+
+```bash
+chmod +x build_linux.sh
+./build_linux.sh
+```
+
+- Binaire genere: `dist/new_psr`
 
 ## Utilisation
 
@@ -54,3 +82,7 @@ procedure_recorder/
   recorder.py
   utils.py
 ```
+
+## Licence
+
+MIT - voir `LICENSE`.

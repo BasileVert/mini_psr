@@ -2,3 +2,5 @@ AGENTS.md
 .venv/
 procedure_20*
 __pycache__
+build/
+dist/
