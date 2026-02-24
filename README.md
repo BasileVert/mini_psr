@@ -6,12 +6,15 @@ Outil Python minimal pour capturer une zone d'ecran a chaque clic souris.
 
 - Selection d'une zone rectangulaire (multi-ecrans)
 - Demarrage de l'enregistrement
-- Capture PNG a chaque clic global dans la periode d'enregistrement
+- Capture PNG uniquement si le clic est dans la zone selectionnee
+- Annotation visuelle du clic (cercle rouge) sur chaque image capturee par clic
+- Option pour capturer aussi la touche `Enter`
+- Compression PNG optimisee pour reduire la taille des fichiers
 - Pause / reprise
 - Arret
 - Sauvegarde dans un dossier `procedure_YYYY-MM-DD_HH-MM-SS` avec:
   - `1.png`, `2.png`, ...
-  - `steps.json` avec `step` et `file`
+  - `steps.json` avec `step`, `file` et `event` (`click` ou `enter`)
 
 ## Prerequis
 
@@ -34,9 +37,12 @@ python procedure_recorder/main.py
 
 1. Cliquer sur `Selectionner une zone`
 2. Dessiner la zone a capturer
-3. Cliquer sur `Demarrer`
-4. Utiliser `Pause` / `Reprendre` si besoin
-5. Cliquer sur `Arreter`
+3. Activer `Capturer la touche Entree` si necessaire
+4. Cliquer sur `Demarrer`
+5. Cliquer dans la zone pour capturer des etapes annotees
+6. Appuyer sur `Enter` pour capturer une etape clavier (option activee)
+7. Utiliser `Pause` / `Reprendre` si besoin
+8. Cliquer sur `Arreter`
 
 ## Structure
 

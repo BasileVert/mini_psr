@@ -5,7 +5,7 @@ from ui import App
 def main():
     root = tk.Tk()
     root.title("Mini Enregistreur de Procedure")
-    root.geometry("320x220")
+    root.geometry("340x260")
     app = App(root)
     root.protocol("WM_DELETE_WINDOW", app.on_close)
     root.mainloop()

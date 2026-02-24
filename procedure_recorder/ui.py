@@ -11,6 +11,7 @@ class App:
         self.recorder = Recorder()
         self.region = None
 
+        self.capture_enter_var = tk.BooleanVar(value=False)
         self.status_var = tk.StringVar(value="Statut : INACTIF")
         self.pause_label = tk.StringVar(value="Pause")
 
@@ -25,6 +26,11 @@ class App:
             fill="x", pady=4
         )
         ttk.Button(btn_frame, text="Arreter", command=self.stop).pack(fill="x", pady=4)
+        ttk.Checkbutton(
+            btn_frame,
+            text="Capturer la touche Entree",
+            variable=self.capture_enter_var,
+        ).pack(fill="x", pady=4)
 
         ttk.Label(btn_frame, textvariable=self.status_var, anchor="w").pack(
             fill="x", pady=4
@@ -43,6 +49,7 @@ class App:
         if not self.region:
             messagebox.showwarning("Demarrage", "Selectionnez une zone avant de demarrer.")
             return
+        self.recorder.set_capture_enter_enabled(self.capture_enter_var.get())
         if self.recorder.start():
             self.status_var.set("Statut : ENREGISTREMENT")
             self.pause_label.set("Pause")
@@ -58,7 +65,7 @@ class App:
             self.pause_label.set("Pause")
 
     def stop(self):
-        self.recorder.stop()
+        self.recorder.stop(capture_on_stop=True)
         self.status_var.set("Statut : INACTIF")
         self.pause_label.set("Pause")
 
