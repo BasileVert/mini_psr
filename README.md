@@ -2,6 +2,9 @@
 
 Outil Python minimal pour capturer une zone d'ecran a chaque clic souris.
 
+<img width="339" height="291" alt="image" src="https://github.com/user-attachments/assets/6d615a54-651e-4b4b-8698-e01ad8b65ffd" />
+
+
 ## Fonctionnalites
 
 - Selection d'une zone rectangulaire (multi-ecrans)
